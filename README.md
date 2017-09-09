@@ -5,9 +5,10 @@ Have you ever wanted to change the channel or play a video game without putting 
 Introducing the Coozy DPad - here is a demo: <br>
 https://www.youtube.com/watch?v=S0Ccens-_vA
 
-This is a text entry-device designed for Interactive Device Design (Fall 2017) at UC Berkeley.
+This is a text entry-device designed for Interactive Device Design (Fall 2017) at UC Berkeley. This initial prototype demonstrates how a device could be used to input text using a "classic video game"-like alphabet display on . My imagined final version of this device would not be wired!
 
-<b>The text entry technique I chose and why:</b>
+<b>The text entry technique I chose and why:</b><br>
+I originally used a multi-tap (think the typical 3-letters-per-key layout for feature phones) text-entry technique, but when I started to think about how the device would be used I decided to simplify the layout to a directional pad with a button to select and a button to delete. This simplified layout minimized the amount of finger dexterity needed to select the individual buttons. While a multi-tap layout may be faster for spelling out a word using a standard cell phone, users holding a typical 12-oz aluminum can will dedicate a higher amount of pressure for gripping their fingers around the can - this distribution of grip can limit the ability to find and press buttons in quick succession. By using a simple D-Pad layout with big buttons, the user can confidently manipulate the device while confirming visually on the display which letter is being selected. Finally, this technique can also translate to navigating TV menus and to indicate directions during video games - two additional use cases.
 
 <b>How I implemented character recognition (i.e., how my code works):</b>
 
