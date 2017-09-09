@@ -7,27 +7,26 @@ https://www.youtube.com/watch?v=S0Ccens-_vA
 
 This is a text entry-device designed for Interactive Device Design (Fall 2017) at UC Berkeley.
 
-What text entry technique you chose and why:
+<b>The text entry technique I chose and why:</b>
 
-How you implemented character recognition (i.e., how your code works):
+<b>How I implemented character recognition (i.e., how my code works):</b>
 
-How you constructed the physical device:
+<b>How you constructed the physical device:</b>
 
-Images:<br>
+<b>Images:</b><br>
+A photo of the final device you constructed:
+
+<b>Wiring diagram:</b> 
 Breadboard<br>
 <img src="./coozydpad_breadboard.PNG"/><br>
 Schematic<br>
 <img src="./coozydpad_schematic.png"/>
 
-A photo of the final device you constructed:
-
-Wiring diagram: 
-
-Reflection: 
+<b>Reflection:</b><br> 
 I learned quite a bit through this assignment. Even though I had soldered wires before (mostly in building radio antennas), this was my first time building an actual electronic device. While I found actually building the breadboard circuit fairly simple (granted it is a simple 6-switch design with pull-up resisters), I saw how, upon considering various form factors, the construction of the physical device can quickly become complicated. 
 
 
-Demo video: https://www.youtube.com/watch?v=S0Ccens-_vA
+<b>Demo video:</b> https://www.youtube.com/watch?v=S0Ccens-_vA
 
 
 License
