@@ -2,7 +2,9 @@ Coozy DPad by Steve Trush
 =====================================
 
 Have you ever wanted to change the channel or play a video game without putting down your beer? Now you can! 
-Introducing the Coozy DPad - here is a demo: https://www.youtube.com/watch?v=S0Ccens-_vA
+Introducing the Coozy DPad - here is a demo: 
+  <iframe src="https://www.youtube.com/embed/S0Ccens-_vA"
+   width="560" height="315" frameborder="0" allowfullscreen></iframe>
 
 This is a text entry-device designed for Interactive Device Design (Fall 2017) at UC Berkeley.
 
@@ -12,8 +14,10 @@ How you implemented character recognition (i.e., how your code works):
 
 How you constructed the physical device:
 
-Images:
-<img src="./coozydpad_breadboard.PNG"/>
+Images:<br>
+Breadboard<br>
+<img src="./coozydpad_breadboard.PNG"/><br>
+Schematic<br>
 <img src="./coozydpad_schematic.png"/>
 
 A photo of the final device you constructed:
