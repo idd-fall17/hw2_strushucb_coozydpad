@@ -1,27 +1,31 @@
-Android Things empty project template
+Coozy DPad by Steve Trush
 =====================================
 
-Use this empty project as a template for your Android Things project.
+Have you ever wanted to change the channel or play a video game without putting down your beer? Now you can! 
+Introducing the Coozy DPad - here is a demo: https://www.youtube.com/watch?v=S0Ccens-_vA
+
+This is a text entry-device designed for Interactive Device Design (Fall 2017) at UC Berkeley.
+
+What text entry technique you chose and why:
+
+How you implemented character recognition (i.e., how your code works):
+
+How you constructed the physical device:
+
+Images:
+<img src="./coozydpad_breadboard.PNG"/>
+<img src="./coozydpad_schematic.png"/>
+
+A photo of the final device you constructed:
+
+Wiring diagram: 
+
+Reflection: 
+I learned quite a bit through this assignment. Even though I had soldered wires before (mostly in building radio antennas), this was my first time building an actual electronic device. While I found actually building the breadboard circuit fairly simple (granted it is a simple 6-switch design with pull-up resisters), I saw how, upon considering various form factors, the construction of the physical device can quickly become complicated. 
 
 
-Pre-requisites
---------------
+Demo video: https://www.youtube.com/watch?v=S0Ccens-_vA
 
-- Android Things compatible board
-- Android Studio 2.2+
-
-
-Build and install
-=================
-
-On Android Studio, click on the "Run" button.
-
-If you prefer to run on the command line, type
-
-```bash
-./gradlew installDebug
-adb shell am start com.example.androidthings.myproject/.MainActivity
-```
 
 License
 -------
