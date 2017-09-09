@@ -2,9 +2,8 @@ Coozy DPad by Steve Trush
 =====================================
 
 Have you ever wanted to change the channel or play a video game without putting down your beer? Now you can! 
-Introducing the Coozy DPad - here is a demo: 
-  <iframe src="https://www.youtube.com/embed/S0Ccens-_vA"
-   width="560" height="315" frameborder="0" allowfullscreen></iframe>
+Introducing the Coozy DPad - here is a demo: <br>
+https://www.youtube.com/watch?v=S0Ccens-_vA
 
 This is a text entry-device designed for Interactive Device Design (Fall 2017) at UC Berkeley.
 
