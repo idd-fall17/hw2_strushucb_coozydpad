@@ -34,7 +34,7 @@ A photo of the completed device without a tasty beverage:<br>
 
 
 <b>Reflection:</b><br> 
-I learned quite a bit through this assignment. Even though I had soldered wires before (mostly in building radio antennas), this was my first time building an actual electronic device. While I found actually building the breadboard circuit fairly simple (granted it is a simple 6-switch design with pull-up resisters), I saw how, upon considering various form factors, the construction of the physical device can quickly become complicated. 
+As someone who had never soldered an electronic device together before, I learned quite a bit through this assignment. Fundamentals of building electrical circuits (for instance, learning how digital switches worked or the difference between pull-up and pull-down resisters) was facilitated through this assignment, but while I found actually building the breadboard circuit fairly simple (granted it is a simple 6-switch design), I learned how, upon considering various form factors, the construction of the physical device can quickly become complicated. 
 
 
 <b>Demo video:</b> https://www.youtube.com/watch?v=S0Ccens-_vA
