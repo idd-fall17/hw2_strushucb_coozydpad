@@ -8,7 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 
 /**
- * Created by Esteban on 9/1/2017.
+ * Created by strushucb on 9/1/2017.
  * AlphabetSelectorView is a RelativeLayout that displays three rows of alphabet letters
  * and displays a cursor. A model can update the view by changing the position of the cursor
  * and changing the text of the resulting message.
@@ -27,6 +27,7 @@ public class AlphabetSelectorView extends RelativeLayout {
 
         //This code was based on the conversation in this thread:
         //https://stackoverflow.com/questions/5191099/how-to-set-relativelayout-layout-params-in-code-not-in-xml
+        //Create three TextViews for each set of 9 characters (alphabet + space)
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
                         RelativeLayout.LayoutParams.WRAP_CONTENT);
         row1 = new TextView(context);
@@ -57,6 +58,7 @@ public class AlphabetSelectorView extends RelativeLayout {
         params.addRule(RelativeLayout.ALIGN_START,row1.getId());
         this.addView(row3, params);
 
+        //the "Result" text view
         params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
         result = new TextView(context);
@@ -67,6 +69,7 @@ public class AlphabetSelectorView extends RelativeLayout {
         params.addRule(RelativeLayout.CENTER_HORIZONTAL);
         this.addView(result, params);
 
+        //create the red highlight cursor
         highlight = new HighlightView(this.getContext());
         this.addView(highlight);
     }
