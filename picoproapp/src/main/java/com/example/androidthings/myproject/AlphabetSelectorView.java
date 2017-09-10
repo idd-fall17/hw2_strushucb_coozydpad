@@ -9,6 +9,9 @@ import android.graphics.Paint;
 
 /**
  * Created by Esteban on 9/1/2017.
+ * AlphabetSelectorView is a RelativeLayout that displays three rows of alphabet letters
+ * and displays a cursor. A model can update the view by changing the position of the cursor
+ * and changing the text of the resulting message.
  */
 
 public class AlphabetSelectorView extends RelativeLayout {
@@ -17,15 +20,13 @@ public class AlphabetSelectorView extends RelativeLayout {
     private TextView row1;
     private TextView row2;
     private TextView row3;
-    public static final int ABC = 1;
-    public static final int DEF = 2;
-    public static final int GHI = 3;
 
-    //https://www.techyourchance.com/mvp-mvc-android-2/
+
     public AlphabetSelectorView(Context context){
         super(context);
 
-
+        //This code was based on the conversation in this thread:
+        //https://stackoverflow.com/questions/5191099/how-to-set-relativelayout-layout-params-in-code-not-in-xml
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
                         RelativeLayout.LayoutParams.WRAP_CONTENT);
         row1 = new TextView(context);
@@ -70,37 +71,61 @@ public class AlphabetSelectorView extends RelativeLayout {
         this.addView(highlight);
     }
 
+    //setMessage - updates the TextView showing the currently displayed message result.
     public void setMessage(String text){
         result.setText(text);
     }
 
-
+    //setHighlight - adjusts the cursor position and redraws on the screen.
     public void setHighlight(int row, int column){
         highlight.setPosition(row, column);
         highlight.invalidate();
     }
 
-
+/*HighlightView is simply a View that draws a red rectangle over the
+specified area on the display acting as a cursor for the user.
+ */
     private class HighlightView extends View {
-        Paint paint = new Paint();
+        private final int CHAR_WIDTH = 36;
+        private final int CHAR_HEIGHT = 40;
+        private final int START_X1 = 240;
+        private final int START_X2 = 270;
+        private final int START_Y1 = 5;
+        private final int START_Y2 = 40;
+
+        private final int OPACITY = 30;
+
+        private Paint paint;
         private int x;
         private int y;
+
         public HighlightView(Context context) {
             super(context);
             x = 0;
             y = 0;
+            paint = new Paint();
+
+            //set the Paint object to red with specified opacity
+            paint.setStrokeWidth(0);
+            paint.setARGB(OPACITY,255,0,0);
         }
 
+        //setPosition updates the position of the cursor
         public void setPosition(int row, int column){
+            //update the position of the highlight
             this.x = column;
             this.y = row;
         }
 
         @Override
         public void onDraw(Canvas canvas) {
-            paint.setStrokeWidth(0);
-            paint.setARGB(30,255,0,0);
-            canvas.drawRect(240+(x*36), 5+(y * 40), 270+(x*36), 40+(y * 40), paint);
+            //draws a rectangle adjusted to the specified position
+            canvas.drawRect(
+                    START_X1+(x * CHAR_WIDTH),
+                    START_Y1+(y * CHAR_HEIGHT),
+                    START_X2+(x * CHAR_WIDTH),
+                    START_Y2+(y * CHAR_HEIGHT),
+                    paint);
         }
 
     }

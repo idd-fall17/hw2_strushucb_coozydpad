@@ -40,6 +40,9 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //I updated this code to create my own "view" that could be updated by a Model/Controller
+        //MVC model based on: https://www.techyourchance.com/mvp-mvc-android-2/
         alphabetSelectorView = new AlphabetSelectorView(this);
         setContentView(alphabetSelectorView);
 
