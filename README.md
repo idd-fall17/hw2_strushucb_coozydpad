@@ -1,6 +1,6 @@
 Coozy DPad by Steve Trush
 =====================================
-
+<img src="./coozy_dpad.jpg"/>
 Have you ever wanted to change the channel or play a video game without putting down your beer? Now you can! 
 Introducing the Coozy DPad - here is a demo: <br>
 https://www.youtube.com/watch?v=S0Ccens-_vA
@@ -14,16 +14,24 @@ Wanting to allow the user to use a single hand to enter text, I originally used 
 This implementation relies on display logic to inform the user which letter is currently selected. For the view, I created a custom RelativeLayout that displays three alphabetical rows of letters are displayed, the resulting message, and a transparent rectangle that shows the user which character is highlighted (see AlphabetSelectorView.java). The combined model/controller (see DPadApp.java) uses EdgeTriggers on 6 GPIO pins to catch button presses, using pull-up resistors, the tactile switches are read as pressed when the pin reads as LOW. The button presses are debounced by checking if the current time exceeds a threshold of 100 milliseconds since the previous reading. The model uses a matrix of characters and simply keeps track of both the row and column currently highlighted. Once the user uses the "Enter" button, the displayed message is updated with the currently highlighted key. In case of mistakes, the user is given the ability to delete characters. To increase typing speed, the rows and columns will wrap (eg. pressing right at the end of a letter row will return the user back to the beginning of that row).
 
 <b>How you constructed the physical device:</b>
-First, I breadboarded the circuits, connecting six momentary tactile switches to pull-up resistors and 6 digital GPIO pins.
+First, I breadboarded the circuits, connecting six momentary tactile switches to pull-up resistors and 6 digital GPIO pins, as shown here: <br>
+<img src="./coozydpad_breadboard.PNG"/><br> Here's a schematic view of the circuit:<br>
+<img src="./coozydpad_schematic.png"/><br>
+Getting the switches to work with the display was the easy part, the challenges of a specific coozy (Koozie) form factor had to be considered. Particularly, coozies are typically used on cold cans that may be wet, due to being pulled from an ice chest and condensation forming on the outside of the can. Beyond possible contact with water, the conductive metal of the can itself could cause a short circuit if parts of the device circuit contacted the can directly. Finally, the actuated buttons and mount would need to be flexible to conform to different circumference containers and provide the user with a smooth surface to hold. 
 
-<b>Images:</b><br>
-A photo of the final device you constructed:
+To achieve a flexible mount, I used a thin rubber foam backing to mount the switches. I then used copper tape as a base to solder together the 10kOhm resistors, switches, wire connections. For waterproofing, I used a moisture-resistant epoxy (Amazing Goop II) to seal the circuitry. Notably, I used a multimeter to ensure zero conductivity of the epoxy prior to sealing the device and, even then, tested the epoxy over on connected switch to ensure that it would function as intended.
 
-<b>Wiring diagram:</b> 
-Breadboard<br>
-<img src="./coozydpad_breadboard.PNG"/><br>
-Schematic<br>
-<img src="./coozydpad_schematic.png"/>
+On the front of the device, instead of using epoxy (I didn't want to the buttons to stick!), I glued a plastic covering over the front of the mount. This plastic front could then be glued inside of the coozy and foam sticker buttons could be affixed to the front of the coozy. However, once a full can of beer was place in the coozy, the amount of pressure on the switches caused them to be unintentionally "pressed". To relieve the amount of pressure, I removed the foam stickers, took a scoring knife and made small incisions through the coozy material directly over the switches. This removed the tension from over the buttons and the device functioned as intended. 
+
+A photo of the back of the device before final waterproofing (notice the UP button is covered in epoxy):<br>
+<img src="./device_back.jpg"/><br>
+
+A photo of the front of the switch mount:<br>
+<img src="./sealed_front.jpg"/><br>
+
+A photo of the completed device without a tasty beverage:<br>
+<img src="./finished_device.jpg"/><br>
+
 
 <b>Reflection:</b><br> 
 I learned quite a bit through this assignment. Even though I had soldered wires before (mostly in building radio antennas), this was my first time building an actual electronic device. While I found actually building the breadboard circuit fairly simple (granted it is a simple 6-switch design with pull-up resisters), I saw how, upon considering various form factors, the construction of the physical device can quickly become complicated. 
