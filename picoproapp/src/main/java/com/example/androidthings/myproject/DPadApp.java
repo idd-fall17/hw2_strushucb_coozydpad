@@ -10,7 +10,7 @@ import com.google.android.things.pio.Gpio;
  */
 
 public class DPadApp extends SimplePicoPro {
-  /* Mapping of buttons to GPIO pins */
+  /* Mapping of buttons to GPIO pins! */
   private Gpio buttonUp = GPIO_172;
   private Gpio buttonDown = GPIO_174;
   private Gpio buttonLeft = GPIO_173;
